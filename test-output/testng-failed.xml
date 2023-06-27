@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [my Demo testNg suite]">
-  <test thread-count="5" name="Sample tests(failed)">
+<suite name="Failed suite [Parameters]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="ParameterTest(failed)">
+    <parameter name="uid" value="Admin"/>
+    <parameter name="browser" value="FIREFOX"/>
+    <parameter name="env" value="QA"/>
+    <parameter name="pwd" value="admin123"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"/>
     <classes>
-      <class name="com.test.GoogleTitleTest">
+      <class name="com.parameters.ParameterTest">
         <methods>
-          <include name="googleLogoTest"/>
-          <include name="googleTitleTest"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
+          <include name="yahoologinTest" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.GoogleTitleTest -->
+      </class> <!-- com.parameters.ParameterTest -->
     </classes>
-  </test> <!-- Sample tests(failed) -->
-</suite> <!-- Failed suite [my Demo testNg suite] -->
+  </test> <!-- ParameterTest(failed) -->
+</suite> <!-- Failed suite [Parameters] -->
